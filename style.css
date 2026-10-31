@@ -140,6 +140,7 @@ a.proof-title:hover { text-decoration: underline; }
 .tl-date { text-align: right; padding-top: 18px; }
 .tl-date strong { display: block; font-size: 2.2rem; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
 .tl-date span { display: block; margin-top: 6px; font-size: .85rem; color: var(--muted); }
+.tl-to { display: block; width: 2px; height: 14px; margin: 8px 1.05em 8px auto; border-radius: 2px; background: var(--line); }
 .tl-dot { justify-self: center; margin-top: 28px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--line); position: relative; z-index: 1; }
 .now .tl-dot { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent); }
 .tl-card { padding: 24px 28px; border-radius: var(--r-lg); background: var(--panel); display: grid; gap: 12px; }
@@ -151,7 +152,7 @@ a.proof-title:hover { text-decoration: underline; }
 .tl-card p { color: var(--muted); }
 .tl-card .chip { background: var(--fig); font-size: .82rem; }
 .tl-card .goal { color: var(--ink); padding: 10px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--fig); }
-@media (max-width: 700px) { .timeline::before { left: 11px; } .tl-item { grid-template-columns: 24px minmax(0,1fr); } .tl-date { grid-column: 2; text-align: left; padding: 0 0 8px; } .tl-dot { grid-column: 1; grid-row: 1; margin-top: 8px; } .tl-card { grid-column: 2; } }
+@media (max-width: 700px) { .tl-date strong { display: inline; font-size: 1.6rem; } .tl-to { display: inline-block; width: 14px; height: 2px; margin: 0 8px; vertical-align: middle; } .tl-date span { display: inline; margin-left: 8px; } .timeline::before { left: 11px; } .tl-item { grid-template-columns: 24px minmax(0,1fr); } .tl-date { grid-column: 2; text-align: left; padding: 0 0 8px; } .tl-dot { grid-column: 1; grid-row: 1; margin-top: 8px; } .tl-card { grid-column: 2; } }
 
 /* Contact */
 .contact { max-width: 720px; margin-inline: auto; background: var(--panel); border-radius: var(--r-lg); padding-inline: 28px; }
