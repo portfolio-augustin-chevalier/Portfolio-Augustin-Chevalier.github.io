@@ -138,8 +138,8 @@ a.proof-title:hover { text-decoration: underline; }
 .path { border-radius: var(--r-lg); background: var(--panel); padding: 36px; display: grid; gap: 10px; align-content: start; }
 .path h3 { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; }
 .path p { color: var(--muted); }
-.path-logo { width: fit-content; margin-bottom: 10px; padding: 14px 20px; border-radius: var(--r-md); background: #FFFFFF; box-shadow: 0 0 0 1px var(--line); }
-.path-logo img { display: block; height: 46px; width: auto; }
+.path-logo { display: block; margin-bottom: 14px; }
+.path-logo img { display: block; height: 52px; width: auto; max-width: 100%; object-fit: contain; object-position: left center; }
 
 /* Contact */
 .contact { max-width: 720px; margin-inline: auto; background: var(--panel); border-radius: var(--r-lg); padding-inline: 28px; }
