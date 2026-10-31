@@ -75,9 +75,9 @@ p { margin: 0; max-width: 65ch; }
 .hero h1 { font-size: clamp(2.8rem, 9vw, 6rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.03; margin-top: 12px; }
 .hero .sub { margin: 24px auto 0; font-size: clamp(1.15rem, 2.4vw, 1.5rem); line-height: 1.4; color: var(--muted); max-width: 40ch; }
 .cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 20px; margin-top: 32px; }
-.tools { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; margin-top: 48px; }
+.tools { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; margin-top: 12px; }
 .tools .chips { justify-content: center; }
-.tools .chip { background: var(--alt); }
+.tools .chip { background: var(--panel); }
 
 /* Haut de page avec photo en fond : toujours sombre pour que le texte reste lisible */
 .hero.photo { position: relative; isolation: isolate; overflow: hidden; min-height: min(88vh, 820px); display: grid; align-content: center; padding-block: 112px 88px; background: #000; color: #F5F5F7; }
@@ -87,7 +87,6 @@ p { margin: 0; max-width: 65ch; }
 .hero.photo .eyebrow, .hero.photo .sub { color: rgba(245, 245, 247, .85); }
 .hero.photo .label { color: rgba(245, 245, 247, .7); }
 .hero.photo .link { color: #2997FF; }
-.hero.photo .tools .chip { background: rgba(255, 255, 255, .14); color: #F5F5F7; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 
 /* Projets phares */
 .features { display: grid; gap: 24px; }
