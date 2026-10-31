@@ -151,7 +151,6 @@ a.proof-title:hover { text-decoration: underline; }
 .tl-card h3 span { font-weight: 500; color: var(--muted); font-size: 1.1rem; }
 .tl-card p { color: var(--muted); }
 .tl-card .chip { background: var(--fig); font-size: .82rem; }
-.tl-card .goal { color: var(--ink); padding: 10px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--fig); }
 @media (max-width: 700px) { .tl-date strong { display: inline; font-size: 1.6rem; } .tl-to { display: inline-block; width: 14px; height: 2px; margin: 0 8px; vertical-align: middle; } .tl-date span { display: inline; margin-left: 8px; } .timeline::before { left: 11px; } .tl-item { grid-template-columns: 24px minmax(0,1fr); } .tl-date { grid-column: 2; text-align: left; padding: 0 0 8px; } .tl-dot { grid-column: 1; grid-row: 1; margin-top: 8px; } .tl-card { grid-column: 2; } }
 
 /* Contact */
