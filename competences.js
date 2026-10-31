@@ -12,6 +12,7 @@
   preuves   : identifiants des projets (projets.js) qui prouvent la
               compétence, dans l'ordre d'affichage (4 maximum conseillé).
               Un projet phare (phare: true) renvoie vers son grand bloc.
+  image     : facultatif, image en haut de la carte, ex. "images/ma-photo.jpg"
 */
 window.COMPETENCES = [
   {
@@ -29,6 +30,7 @@ window.COMPETENCES = [
   {
     id: "simulation",
     titre: "Simulation numérique",
+    image: "images/simulation-f1.jpg",
     accroche: "Valider avant de fabriquer.",
     points: [
       "Calcul de structures par éléments finis et optimisation topologique",

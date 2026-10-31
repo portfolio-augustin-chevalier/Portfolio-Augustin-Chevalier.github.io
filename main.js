@@ -74,7 +74,10 @@
       var outilsHtml = (c.outils || []).length
         ? '<div class="chips">' + c.outils.map(function (o) { return '<span class="chip">' + esc(o) + "</span>"; }).join("") + "</div>"
         : "";
-      return '<article class="comp" id="comp-' + esc(c.id) + '">' + icone(c.id) +
+      var media = c.image
+        ? '<figure class="comp-media"><img src="' + esc(c.image) + '" alt="' + esc(c.titre) + '" loading="lazy"></figure>'
+        : "";
+      return '<article class="comp" id="comp-' + esc(c.id) + '">' + media + icone(c.id) +
         "<h3>" + esc(c.titre) + '</h3><p class="comp-hook">' + esc(c.accroche) + "</p>" +
         '<ul class="points">' + points + "</ul>" + outilsHtml +
         (preuves ? '<h4 class="label">Preuves</h4><ul class="proofs">' + preuves + "</ul>" : "") +
