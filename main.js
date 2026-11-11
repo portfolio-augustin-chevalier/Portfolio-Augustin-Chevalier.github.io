@@ -5,7 +5,6 @@
   var projetParId = {}, compParId = {};
   projets.forEach(function (p) { projetParId[p.id] = p; });
   comps.forEach(function (c) { compParId[c.id] = c; });
-  var phares = projets.filter(function (p) { return p.phare; });
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -38,26 +37,30 @@
     el("outils").innerHTML = liste.map(function (o) { return '<span class="chip">' + esc(o) + "</span>"; }).join("");
   }
 
-  /* Grands blocs projets */
-  function features() {
-    el("features").innerHTML = phares.map(function (p) {
-      var chiffres = (p.chiffres || []).map(function (c) {
-        return '<div class="stat"><strong>' + esc(c.v) + "</strong><span>" + esc(c.l) + "</span></div>";
+  /* Projets, rangés par catégorie */
+  function projetsParCategorie() {
+    var cats = Array.isArray(window.CATEGORIES) ? window.CATEGORIES : [];
+    var nav = [], blocs = [];
+    cats.forEach(function (cat) {
+      var liste = projets.filter(function (p) { return p.categorie === cat.id; });
+      if (!liste.length) return;
+      nav.push('<a class="chip" href="#cat-' + esc(cat.id) + '">' + esc(cat.titre) + "</a>");
+      var cartes = liste.map(function (p) {
+        var outilsHtml = (p.outils || []).map(function (o) { return '<span class="chip">' + esc(o) + "</span>"; }).join("");
+        var media = p.image ? '<figure class="pc-media"><img src="' + esc(p.image) + '" alt="" loading="lazy"></figure>' : "";
+        return '<article class="pcard" id="p-' + esc(p.id) + '">' + media +
+          '<div class="pc-body"><span class="label">' + esc(p.cadre) + " · " + esc(p.annee) + "</span>" +
+          "<h4>" + esc(p.titre) + "</h4>" +
+          '<p class="pc-obj"><strong>Objectif.</strong> ' + esc(p.objectif) + "</p>" +
+          '<p class="pc-demarche">' + esc(p.demarche) + "</p>" +
+          (outilsHtml ? '<div class="chips">' + outilsHtml + "</div>" : "") +
+          "</div></article>";
       }).join("");
-      var tags = (p.competences || []).map(function (id) {
-        return '<span class="tag">' + esc(compParId[id] ? compParId[id].titre : id) + "</span>";
-      }).join("");
-      var media = p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.titre) + '" loading="lazy">' : "";
-      var rapport = p.rapport
-        ? '<a class="btn primary" href="' + esc(p.rapport) + '" target="_blank" rel="noopener">Lire le rapport (PDF)</a>'
-        : "";
-      return '<article class="feature" id="p-' + esc(p.id) + '"><figure class="f-media">' + media + "</figure>" +
-        '<div class="f-body"><span class="label">' + esc(p.formation) + " · " + esc(p.annee) + "</span>" +
-        "<h3>" + esc(p.titre) + '</h3><p class="hook">' + esc(p.accroche) + "</p>" +
-        '<div class="stats">' + chiffres + "</div>" +
-        '<p class="desc">' + esc(p.resume) + "</p>" +
-        '<div class="tags">' + tags + "</div>" + rapport + "</div></article>";
-    }).join("");
+      blocs.push('<div class="pgroup" id="cat-' + esc(cat.id) + '"><div class="pgroup-head"><h3>' + esc(cat.titre) + "</h3><p>" + esc(cat.accroche) + "</p></div>" +
+        '<div class="pgrid">' + cartes + "</div></div>");
+    });
+    el("projets-nav").innerHTML = nav.join("");
+    el("projets-liste").innerHTML = blocs.join("");
   }
 
   /* Cartes de compétences, avec les projets qui les prouvent */
@@ -65,10 +68,8 @@
     el("comps").innerHTML = comps.map(function (c) {
       var points = (c.points || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
       var preuves = (c.preuves || []).map(function (id) { return projetParId[id]; }).filter(Boolean).map(function (p) {
-        var titre = p.phare
-          ? '<a class="proof-title" href="#p-' + esc(p.id) + '">' + esc(p.titre) + '</a><span class="pill">Rapport</span>'
-          : '<span class="proof-title">' + esc(p.titre) + "</span>";
-        var texte = p.phare && p.chiffres && p.chiffres[0] ? p.chiffres[0].v + " · " + p.chiffres[0].l : p.accroche;
+        var titre = '<a class="proof-title" href="#p-' + esc(p.id) + '">' + esc(p.titre) + "</a>";
+        var texte = p.objectif;
         return '<li class="proof"><div class="proof-head">' + titre + '</div><p>' + esc(texte) + "</p></li>";
       }).join("");
       var outilsHtml = (c.outils || []).length
@@ -97,6 +98,6 @@
   });
 
   outils();
-  features();
+  projetsParCategorie();
   competences();
 })();

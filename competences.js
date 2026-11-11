@@ -11,7 +11,7 @@
   outils    : logiciels et machines, ex. ["SolidWorks"] ([] pour rien)
   preuves   : identifiants des projets (projets.js) qui prouvent la
               compétence, dans l'ordre d'affichage (4 maximum conseillé).
-              Un projet phare (phare: true) renvoie vers son grand bloc.
+              Chaque preuve renvoie vers la carte du projet.
   image     : facultatif, image en haut de la carte : un fichier du dossier images
               (ex. "images/ma-photo.jpg") ou l'adresse d'une photo Unsplash
 */

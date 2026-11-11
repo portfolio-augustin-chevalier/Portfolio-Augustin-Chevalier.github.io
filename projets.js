@@ -1,179 +1,163 @@
 /*
   ============================================================
-  LISTE DES PROJETS
+  CATÉGORIES ET PROJETS
   ============================================================
-  Deux sortes de projets :
+  Les projets sont affichés par catégorie, dans l'ordre de ce fichier.
 
-  1) Les projets PHARES (phare: true) : ils ont leur grand bloc dans la
-     section "Projets", avec image, chiffres clés et rapport en PDF.
-  2) Les AUTRES projets : une seule phrase, sans rapport. Ils
-     apparaissent comme preuves dans les cartes de compétences
-     (competences.js, liste "preuves").
+  Pour ajouter un projet : copie un bloc { ... } dans la liste PROJETS,
+  donne-lui un id unique et la bonne catégorie. Pour qu'il apparaisse
+  aussi dans une carte de compétence, ajoute son id dans "preuves"
+  (fichier competences.js).
 
-  Pour ajouter un projet, copie un bloc { ... }, colle-le dans la liste,
-  donne-lui un id unique, puis ajoute cet id dans "preuves" de la
-  compétence concernée.
-
-  id          : mot court unique, sans espace ni accent
-  titre       : nom du projet
-  formation   : "BUT GMP" ou "INSA"
-  annee       : ex. "2024 – 2025"
-  accroche    : une phrase qui donne envie de lire la suite
-  phare       : true pour un grand bloc (sinon, laisse de côté)
-
-  Seulement pour un projet phare :
-  chiffres    : trois chiffres clés [{ v: "...", l: "..." }]
-  resume      : 2 à 3 phrases
-  competences : identifiants des compétences (étiquettes sous le projet)
-  image       : "images/mon-projet.jpg"
-  rapport     : "rapports/mon-projet.pdf" ("" s'il n'y en a pas)
+  id         : mot court unique, sans espace ni accent
+  categorie  : id d'une catégorie ci-dessous
+  titre      : nom du projet
+  cadre      : "BUT GMP", "INSA Lyon", "Stage"…
+  annee      : ex. "2024 – 2025"
+  image      : un fichier du dossier images ("images/mon-projet.jpg")
+               ou une photo Unsplash : photo("photo-…")
+  objectif   : une phrase, ce qu'il fallait faire
+  demarche   : une ou deux phrases, comment je m'y suis pris
+  outils     : logiciels et méthodes utilisés
 */
-window.PROJETS = [
-  {
-    id: "compresseur",
-    phare: true,
-    titre: "Optimisation de la cuve d'un compresseur",
-    formation: "BUT GMP",
-    annee: "2024 – 2025",
-    accroche: "Alléger une cuve sans perdre en sécurité.",
-    chiffres: [
-      { v: "220 000 €", l: "gain annuel estimé" },
-      { v: "2 mm", l: "épaisseur retenue, pour un rayon de 146 mm" },
-      { v: "75 000", l: "cuves fabriquées par an" }
-    ],
-    resume: "Cuve d'un compresseur d'air de 50 L en acier S235. Pré-étude sur tableur, simulation sous pression, puis étude de conception sous SolidWorks pour trouver le meilleur couple rayon et épaisseur, en respectant le coefficient de sécurité de la norme et les encombrements imposés.",
-    competences: ["simulation", "conception", "durable", "mecanique"],
-    image: "images/cuve-compresseur.jpg",
-    rapport: "rapports/sae-5-10-cuve-compresseur.pdf"
-  },
-  {
-    id: "voiture-aero",
-    phare: true,
-    titre: "Voiture aérodynamique : de la simulation à la soufflerie",
-    formation: "BUT GMP",
-    annee: "2023 – 2024",
-    accroche: "Réduire la traînée, du calcul à la soufflerie.",
-    chiffres: [
-      { v: "0,633", l: "SCx final" },
-      { v: "3e sur 14", l: "au classement" },
-      { v: "18 / 20", l: "note du rapport" }
-    ],
-    resume: "Compétition de promotion pour réduire la traînée d'une maquette de voiture. Deux modèles conçus séparément et comparés sous Flow Simulation, puis amélioration du modèle retenu (diffuseur, rampe avant, aileron), impression 3D et essai en soufflerie. Le comparatif entre simulation et soufflerie montre l'écart entre le calcul et la réalité.",
-    competences: ["simulation", "conception", "fabrication"],
-    image: "images/voiture-aero.jpg",
-    rapport: "rapports/snrv-voiture-aerodynamique.pdf"
-  },
-  {
-    id: "debudeuse",
-    phare: true,
-    titre: "Débudeuse de chanvre",
-    formation: "INSA",
-    annee: "2025 – 2026",
-    accroche: "Une machine low-tech pour les petits producteurs.",
-    chiffres: [
-      { v: "20 tiges / min", l: "cadence visée" },
-      { v: "150 N", l: "effort de traction" },
-      { v: "TOPSIS", l: "méthode de choix du concept" }
-    ],
-    resume: "Les fleurs de chanvre demandent une séparation délicate. Conception d'une machine qui les sépare des tiges par calibrage sur plaque trouée, avec entraînement par rouleaux. Analyse fonctionnelle, éco-conception (matériaux, réparabilité, fin de vie), dimensionnement de la motorisation, puis maquette CAO sous 3D Experience avec des composants standards.",
-    competences: ["conception", "innovation", "durable", "mecanique"],
-    image: "images/debudeuse-chanvre.jpg",
-    rapport: "rapports/rapport-debudeuse-chanvre.pdf"
-  },
-  {
-    id: "compacteur",
-    phare: true,
-    titre: "Compacteur manuel de canettes",
-    formation: "INSA",
-    annee: "2025 – 2026",
-    accroche: "Faire de la place et faciliter le recyclage.",
-    chiffres: [
-      { v: "TOPSIS", l: "méthode de choix du concept" },
-      { v: "Cycle de vie", l: "étudié avant de choisir" },
-      { v: "Squelette CAO", l: "base de la conception" }
-    ],
-    resume: "Compacteur domestique qui réduit le volume des canettes en aluminium pour faciliter leur stockage et leur recyclage. Analyse du besoin, hiérarchisation des fonctions, recherche de concepts, étude du cycle de vie, choix par TOPSIS, puis squelette CAO de la solution retenue.",
-    competences: ["conception", "innovation", "durable"],
-    image: "images/compacteur-canettes.jpg",
-    rapport: "rapports/rapport-compacteur-canettes.pdf"
-  },
-
-  /* ---------- Autres projets : une phrase, sans rapport ---------- */
-  {
-    id: "cle-pla",
-    titre: "Clé dynamométrique jetable en PLA",
-    formation: "BUT GMP",
-    annee: "2024 – 2025",
-    accroche: "Tient 2,9 N.m et cède à 3,2 N.m pour 3 N.m visés, grâce à l'optimisation topologique."
-  },
-  {
-    id: "jumeau",
-    titre: "Jumeau numérique d'une poutre",
-    formation: "BUT GMP",
-    annee: "2024 – 2025",
-    accroche: "Fissure détectée dans une poutre de 600 mm avec 1 à 2,2 % d'erreur, entre un programme R et SolidWorks."
-  },
-  {
-    id: "lean",
-    titre: "Lean manufacturing sous Flexsim",
-    formation: "BUT GMP",
-    annee: "2024 – 2025",
-    accroche: "Plan d'amélioration à 80 k€ amorti en 5 mois, pour un gain estimé à 185 400 € par an."
-  },
-  {
-    id: "alternance",
-    titre: "Alternance en bureau d'études",
-    formation: "BUT GMP",
-    annee: "2024 – 2025",
-    accroche: "Un an dans un bureau d'études de mobilier médical : barrière de lit escamotable, plaque d'alimentation, pièces plastiques et prototypes."
-  },
-  {
-    id: "atelier-3d",
-    titre: "Atelier en 3D et réalité virtuelle",
-    formation: "BUT GMP",
-    annee: "2023 – 2024",
-    accroche: "Cisaille manuelle modélisée à partir de cotes relevées sur place, atelier visualisé en réalité virtuelle sous FlexSim."
-  },
-  {
-    id: "solar",
-    titre: "Solar Challenge",
-    formation: "BUT GMP",
-    annee: "2023 – 2024",
-    accroche: "Direction, propulsion et support de boîtier d'une voiture, avec des pièces imprimées en 3D."
-  },
-  {
-    id: "stage",
-    titre: "Stage en bureau d'études de machines spéciales",
-    formation: "BUT GMP",
-    annee: "2023 – 2024",
-    accroche: "Trois mois pour concevoir un prototype de découpe de boîtes à recycler, avec convoyeur et montage en atelier."
-  },
-  {
-    id: "bielle",
-    titre: "Bielle de sécurité",
-    formation: "BUT GMP",
-    annee: "2022 – 2023",
-    accroche: "Bielle allégée qui travaille comme un ressort : coefficient de sécurité de 3,1 en simulation, essai de traction sur éprouvettes."
-  },
-  {
-    id: "ilot-robot",
-    titre: "Îlot robotisé de production",
-    formation: "BUT GMP",
-    annee: "2022 – 2023",
-    accroche: "Robot FANUC choisi après calcul de cadence, préhenseur dessiné sous SolidWorks, trois programmes simulés sous ROBOGUIDE."
-  },
-  {
-    id: "support-tel",
-    titre: "Support de téléphone inclinable",
-    formation: "BUT GMP",
-    annee: "2022 – 2023",
-    accroche: "Prototype à cinq crans, coefficient de sécurité de 45 en simulation, compatible d'un Pixel 4a à un iPhone 12 Pro Max."
-  },
-  {
-    id: "bracelet",
-    titre: "Bracelet haptique pour la randonnée",
-    formation: "INSA",
-    annee: "2025 – 2026",
-    accroche: "Un bracelet qui guide sans smartphone : entretiens d'utilisateurs, test du concept, business model et poster A2."
-  }
+window.CATEGORIES = [
+  { id: "conception", titre: "Conception et innovation produit", accroche: "Partir d'un besoin pour arriver à une solution concrète." },
+  { id: "simulation", titre: "Simulation et calcul", accroche: "Vérifier par le calcul avant de fabriquer." },
+  { id: "production", titre: "Production et industrialisation", accroche: "Penser la fabrication et l'organisation de l'atelier." },
+  { id: "entreprise", titre: "En entreprise", accroche: "Travailler sur des produits réels, avec de vraies contraintes." }
 ];
+
+(function () {
+  /* Photos Unsplash, recadrées au format des cartes */
+  function photo(id) { return "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=900&h=560&q=80"; }
+
+  window.PROJETS = [
+    /* ---------- Conception et innovation produit ---------- */
+    {
+      id: "debudeuse", categorie: "conception",
+      titre: "Débudeuse de chanvre", cadre: "INSA Lyon", annee: "2025 – 2026",
+      image: photo("photo-1631112086050-4ca0b7ac73f3"),
+      objectif: "Concevoir une machine low-tech qui sépare les fleurs de chanvre de leurs tiges, pensée pour les petits producteurs.",
+      demarche: "Analyse fonctionnelle, recherche de concepts et choix par la méthode TOPSIS, puis dimensionnement de la motorisation et maquette CAO avec des composants standards, en intégrant l'éco-conception (matériaux, réparabilité, fin de vie).",
+      outils: ["3D Experience", "Analyse fonctionnelle", "TOPSIS", "Éco-conception"]
+    },
+    {
+      id: "compacteur", categorie: "conception",
+      titre: "Compacteur manuel de canettes", cadre: "INSA Lyon", annee: "2025 – 2026",
+      image: photo("photo-1605780084182-467a42b6772f"),
+      objectif: "Imaginer un compacteur domestique qui réduit le volume des canettes pour faciliter leur stockage et leur recyclage.",
+      demarche: "Analyse du besoin et hiérarchisation des fonctions, recherche de concepts, étude du cycle de vie, choix de la solution par TOPSIS, puis conception à partir d'un squelette CAO.",
+      outils: ["Analyse du besoin", "Cycle de vie", "TOPSIS", "CAO squelette"]
+    },
+    {
+      id: "bracelet", categorie: "conception",
+      titre: "Bracelet haptique pour la randonnée", cadre: "INSA Lyon", annee: "2025 – 2026",
+      image: photo("photo-1748280613430-27e9ecb9aaf6"),
+      objectif: "Imaginer un bracelet qui guide le randonneur par vibrations, sans avoir à sortir son smartphone.",
+      demarche: "Entretiens avec des utilisateurs, test du concept, construction du business model, puis présentation du projet sur un poster.",
+      outils: ["Entretiens utilisateurs", "Test de concept", "Business model"]
+    },
+    {
+      id: "support-tel", categorie: "conception",
+      titre: "Support de téléphone inclinable", cadre: "BUT GMP", annee: "2022 – 2023",
+      image: photo("photo-1617975426095-f073792aef15"),
+      objectif: "Concevoir un support de téléphone réglable en inclinaison, compatible avec des modèles de tailles différentes.",
+      demarche: "Conception en CAO d'un mécanisme à crans, vérification de la tenue en simulation, puis réalisation d'un prototype.",
+      outils: ["CAO", "Simulation", "Prototype"]
+    },
+    {
+      id: "solar", categorie: "conception",
+      titre: "Solar Challenge", cadre: "BUT GMP", annee: "2023 – 2024",
+      image: photo("photo-1578332183688-33ca3dbf70f4"),
+      objectif: "Participer à la conception d'une petite voiture solaire pour une course entre écoles.",
+      demarche: "Conception de la direction, de la propulsion et du support de boîtier, avec des pièces imprimées en 3D.",
+      outils: ["CAO", "Impression 3D"]
+    },
+
+    /* ---------- Simulation et calcul ---------- */
+    {
+      id: "compresseur", categorie: "simulation",
+      titre: "Optimisation de la cuve d'un compresseur", cadre: "BUT GMP", annee: "2024 – 2025",
+      image: photo("photo-1737874132953-b39a4812875d"),
+      objectif: "Alléger la cuve d'un compresseur d'air sans dégrader sa sécurité.",
+      demarche: "Pré-étude sur tableur, simulation de la cuve sous pression, puis étude de conception pour trouver le meilleur couple rayon et épaisseur, dans le respect de la norme et des encombrements imposés.",
+      outils: ["SolidWorks Simulation", "Étude de conception", "Tableur"]
+    },
+    {
+      id: "voiture-aero", categorie: "simulation",
+      titre: "Voiture aérodynamique", cadre: "BUT GMP", annee: "2023 – 2024",
+      image: photo("photo-1678402001029-5b8cc141944a"),
+      objectif: "Réduire la traînée d'une maquette de voiture, lors d'une compétition entre étudiants de la promotion.",
+      demarche: "Deux modèles conçus puis comparés en simulation d'écoulement, améliorations du modèle retenu (diffuseur, rampe avant, aileron), impression 3D et essai en soufflerie pour confronter le calcul à la réalité.",
+      outils: ["SolidWorks", "Flow Simulation", "Impression 3D", "Soufflerie"]
+    },
+    {
+      id: "jumeau", categorie: "simulation",
+      titre: "Jumeau numérique d'une poutre", cadre: "BUT GMP", annee: "2024 – 2025",
+      image: photo("photo-1627922529156-41f27fb6f7ac"),
+      objectif: "Détecter une fissure dans une poutre à partir de son comportement vibratoire.",
+      demarche: "Étude des fréquences propres de la poutre, avec un programme écrit en R comparé à un modèle SolidWorks.",
+      outils: ["R", "SolidWorks", "Analyse vibratoire"]
+    },
+    {
+      id: "cle-pla", categorie: "simulation",
+      titre: "Clé dynamométrique jetable en PLA", cadre: "BUT GMP", annee: "2024 – 2025",
+      image: photo("photo-1758387836566-6a342434f5b4"),
+      objectif: "Concevoir une clé imprimée en 3D qui cède au-delà d'un couple de serrage donné.",
+      demarche: "Optimisation topologique de la forme, impression 3D, puis essais pour vérifier le seuil de rupture.",
+      outils: ["Optimisation topologique", "Impression 3D", "Essais"]
+    },
+    {
+      id: "bielle", categorie: "simulation",
+      titre: "Bielle de sécurité", cadre: "BUT GMP", annee: "2022 – 2023",
+      image: photo("photo-1753028196199-be701ae822d3"),
+      objectif: "Concevoir une bielle allégée qui travaille comme un ressort.",
+      demarche: "Dimensionnement et vérification en simulation, puis essais de traction sur éprouvettes pour valider le matériau.",
+      outils: ["Simulation", "Essai de traction", "Matériaux"]
+    },
+
+    /* ---------- Production et industrialisation ---------- */
+    {
+      id: "lean", categorie: "production",
+      titre: "Lean manufacturing sous FlexSim", cadre: "BUT GMP", annee: "2024 – 2025",
+      image: photo("photo-1717386255773-1e3037c81788"),
+      objectif: "Améliorer le fonctionnement d'une ligne de production.",
+      demarche: "Modélisation de la ligne sous FlexSim, analyse des pertes, puis plan d'amélioration construit avec les outils du Lean.",
+      outils: ["FlexSim", "Lean", "TPM", "SMED", "5S"]
+    },
+    {
+      id: "ilot-robot", categorie: "production",
+      titre: "Îlot robotisé de production", cadre: "BUT GMP", annee: "2022 – 2023",
+      image: photo("photo-1712238107642-663e1980b874"),
+      objectif: "Concevoir un îlot de production robotisé.",
+      demarche: "Choix du robot à partir d'un calcul de cadence, dessin du préhenseur, puis programmation et simulation des cycles du robot.",
+      outils: ["FANUC", "ROBOGUIDE", "SolidWorks"]
+    },
+    {
+      id: "atelier-3d", categorie: "production",
+      titre: "Atelier en 3D et réalité virtuelle", cadre: "BUT GMP", annee: "2023 – 2024",
+      image: photo("photo-1764114441097-6a475eca993d"),
+      objectif: "Reproduire un atelier en 3D pour pouvoir le parcourir en réalité virtuelle.",
+      demarche: "Relevé de cotes sur place, modélisation d'une cisaille manuelle, implantation de l'atelier, puis visualisation en réalité virtuelle.",
+      outils: ["Fusion 360", "FlexSim", "Réalité virtuelle"]
+    },
+
+    /* ---------- En entreprise ---------- */
+    {
+      id: "alternance", categorie: "entreprise",
+      titre: "Alternance en bureau d'études", cadre: "Corona Médical", annee: "Depuis 2024",
+      image: photo("photo-1778151270902-cb0ca572f2ee"),
+      objectif: "Concevoir et faire évoluer du mobilier médical, principalement des lits et des brancards.",
+      demarche: "Conception de pièces et de sous-ensembles (barrière de lit escamotable, plaque d'alimentation, pièces plastiques) et suivi de prototypes.",
+      outils: ["SolidWorks", "Pièces plastiques", "Prototypes"]
+    },
+    {
+      id: "stage", categorie: "entreprise",
+      titre: "Stage en bureau d'études de machines spéciales", cadre: "Stage", annee: "2023 – 2024",
+      image: photo("photo-1528323273322-d81458248d40"),
+      objectif: "Concevoir un prototype de machine qui découpe des boîtes à recycler.",
+      demarche: "Trois mois pour concevoir le prototype et son convoyeur, puis participer à son montage en atelier.",
+      outils: ["CAO", "Convoyeur", "Montage en atelier"]
+    }
+  ];
+})();
