@@ -52,8 +52,8 @@ window.CATEGORIES = [
     {
       id: "solar", categorie: "conception",
       titre: "Solar Challenge", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: "../images/projet-solar.jpg",
-      objectif: "Take part in designing a small solar car for an inter-school race.",
+      image: photo("photo-1727622738037-65923e2319d9"),
+      objectif: "Design, as a team, a small remote-controlled solar car with a welded chassis and a solar panel, for a race between the groups in our class.",
       demarche: "Design of the steering, the drivetrain and the electronics box mount, with 3D-printed parts.",
       outils: ["CAD", "3D printing"]
     },

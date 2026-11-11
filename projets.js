@@ -68,8 +68,8 @@ window.CATEGORIES = [
     {
       id: "solar", categorie: "conception",
       titre: "Solar Challenge", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: "images/projet-solar.jpg",
-      objectif: "Participer à la conception d'une petite voiture solaire pour une course entre écoles.",
+      image: photo("photo-1727622738037-65923e2319d9"),
+      objectif: "Concevoir en groupe une petite voiture solaire téléguidée, avec un châssis soudé et un panneau solaire, pour une course entre les groupes de la promotion.",
       demarche: "Conception de la direction, de la propulsion et du support de boîtier, avec des pièces imprimées en 3D.",
       outils: ["CAO", "Impression 3D"]
     },
