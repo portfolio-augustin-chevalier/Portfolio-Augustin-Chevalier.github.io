@@ -14,6 +14,7 @@
               Chaque preuve renvoie vers la carte du projet.
   image     : facultatif, image en haut de la carte : un fichier du dossier images
               (ex. "images/ma-photo.jpg") ou l'adresse d'une photo Unsplash
+  Version anglaise : en/competences.js (même structure, à mettre à jour en même temps).
 */
 window.COMPETENCES = [
   {

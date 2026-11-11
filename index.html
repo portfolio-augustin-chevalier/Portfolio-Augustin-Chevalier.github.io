@@ -6,6 +6,8 @@
 <title>Portfolio Augustin Chevalier</title>
 <meta name="description" content="Étudiant ingénieur en génie mécanique à l'INSA Lyon : conception, simulation et innovation produit.">
 <link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="en" href="https://portfolio-augustin-chevalier.github.io/en/">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
 
@@ -19,6 +21,13 @@
       <a href="#projets">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="bar-tools">
+      <div class="lang" role="group" aria-label="Langue"><a href="./" aria-current="page">FR</a><a href="en/" hreflang="en" lang="en">EN</a></div>
+      <button class="theme-btn" type="button" data-label-dark="Passer en mode sombre" data-label-light="Passer en mode clair" aria-label="Passer en mode sombre">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -29,7 +38,8 @@
       <h1>Portfolio<br>Augustin Chevalier</h1>
       <p class="sub">Étudiant ingénieur en conception et innovation de produits. Je transforme un besoin en pièce, et je vérifie qu'elle tient avant de la fabriquer.</p>
       <div class="cta">
-        <a class="btn primary" href="#projets">Voir mes projets</a>
+        <a class="btn primary" href="cv/CV_Augustin_Chevalier.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Télécharger mon CV</a>
+        <a class="btn" href="#projets">Voir mes projets</a>
         <a class="link" href="#contact">Me contacter</a>
       </div>
     </div>
@@ -61,7 +71,7 @@
           <div class="tl-date"><strong>2022</strong><span>Bac obtenu</span></div>
           <div class="tl-dot" aria-hidden="true"></div>
           <article class="tl-card">
-            <div class="tl-top"><picture class="tl-logo"><source srcset="images/logo-lycee-grandmont-sombre.png" media="(prefers-color-scheme: dark)"><img src="images/logo-lycee-grandmont.png" alt="Logo Lycée Grandmont"></picture></div>
+            <div class="tl-top"><span class="tl-logo"><img class="logo-clair" src="images/logo-lycee-grandmont.png" alt="Logo Lycée Grandmont"><img class="logo-sombre" src="images/logo-lycee-grandmont-sombre.png" alt=""></span></div>
             <h3>Bac STI2D <span>· Lycée Grandmont, Tours</span></h3>
             <p>Là où mon goût pour la technique a pris racine : conception et étude mécanique de systèmes techniques, premières bases de modélisation.</p>
             
@@ -72,9 +82,9 @@
           <div class="tl-date"><strong>2022</strong><i class="tl-to" aria-label="à"></i><strong>2025</strong></div>
           <div class="tl-dot" aria-hidden="true"></div>
           <article class="tl-card">
-            <div class="tl-top"><picture class="tl-logo"><source srcset="images/logo-universite-angers-sombre.png" media="(prefers-color-scheme: dark)"><img src="images/logo-universite-angers.png" alt="Logo Université d'Angers"></picture></div>
+            <div class="tl-top"><span class="tl-logo"><img class="logo-clair" src="images/logo-universite-angers.png" alt="Logo Université d'Angers"><img class="logo-sombre" src="images/logo-universite-angers-sombre.png" alt=""></span></div>
             <h3>BUT GMP <span>· IUT d'Angers, Angers</span></h3>
-            <p>Conception, simulation et fabrication mécanique. Parcours SNRV (CAO, FAO, éléments finis), puis 3ᵉ année en alternance chez Corona Médical.</p>
+            <p>Conception, simulation et fabrication mécanique. Parcours SNRV (CAO, FAO, éléments finis), puis 3ᵉ année en alternance chez HAcare.</p>
             
             <div class="chips"><span class="chip">Parcours SNRV</span><span class="chip">CAO · FAO</span><span class="chip">Éléments finis</span><span class="chip">Alternance</span></div>
           </article>
@@ -83,9 +93,9 @@
           <div class="tl-date"><strong>2025</strong><i class="tl-to" aria-label="à"></i><strong>2028</strong><span>diplôme prévu</span></div>
           <div class="tl-dot" aria-hidden="true"></div>
           <article class="tl-card">
-            <div class="tl-top"><picture class="tl-logo"><source srcset="images/logo-insa-lyon-sombre.png" media="(prefers-color-scheme: dark)"><img src="images/logo-insa-lyon.png" alt="Logo INSA Lyon"></picture><span class="pill">En cours</span></div>
+            <div class="tl-top"><span class="tl-logo"><img class="logo-clair" src="images/logo-insa-lyon.png" alt="Logo INSA Lyon"><img class="logo-sombre" src="images/logo-insa-lyon-sombre.png" alt=""></span><span class="pill">En cours</span></div>
             <h3>Diplôme d'ingénieur <span>· INSA Lyon, Lyon</span></h3>
-            <p>Spécialité GMCIP en alternance chez Corona Médical : technique, gestion de projet, innovation et management.</p>
+            <p>Spécialité GMCIP en alternance chez HAcare : technique, gestion de projet, innovation et management.</p>
             <div class="chips"><span class="chip">GMCIP</span><span class="chip">Alternance</span><span class="chip">Innovation</span></div>
           </article>
         </li>
@@ -120,7 +130,7 @@
         </div>
         <div class="row">
           <span class="label">Localisation</span>
-          <span class="val">37000 Tours, France</span>
+          <span class="val">Lyon, France</span>
           <span></span>
         </div>
       </div>

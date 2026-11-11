@@ -19,6 +19,7 @@
   objectif   : une phrase, ce qu'il fallait faire
   demarche   : une ou deux phrases, comment je m'y suis pris
   outils     : logiciels et méthodes utilisés
+  Version anglaise : en/projets.js (même structure, à mettre à jour en même temps).
 */
 window.CATEGORIES = [
   { id: "conception", titre: "Conception et innovation produit", accroche: "Partir d'un besoin pour arriver à une solution concrète." },
@@ -145,19 +146,19 @@ window.CATEGORIES = [
     /* ---------- En entreprise ---------- */
     {
       id: "alternance", categorie: "entreprise",
-      titre: "Alternance en bureau d'études", cadre: "Corona Médical", annee: "Depuis 2024",
+      titre: "Alternance en bureau d'études", cadre: "HAcare", annee: "Depuis 2024",
       image: photo("photo-1778151270902-cb0ca572f2ee"),
-      objectif: "Concevoir et faire évoluer du mobilier médical, principalement des lits et des brancards.",
-      demarche: "Conception de pièces et de sous-ensembles (barrière de lit escamotable, plaque d'alimentation, pièces plastiques) et suivi de prototypes.",
-      outils: ["SolidWorks", "Pièces plastiques", "Prototypes"]
+      objectif: "Concevoir et faire évoluer du mobilier médical, principalement des lits et des brancards, d'abord comme technicien puis comme ingénieur en conception.",
+      demarche: "Conception de pièces et d'ensembles sous SolidWorks avec leurs nomenclatures, standardisation des composants et des méthodes CAO de la gamme, puis montage et essais de prototypes pour valider les concepts.",
+      outils: ["SolidWorks", "Nomenclatures", "Standardisation", "Prototypes"]
     },
     {
       id: "stage", categorie: "entreprise",
-      titre: "Stage en bureau d'études de machines spéciales", cadre: "Stage", annee: "2023 – 2024",
+      titre: "Stage en bureau d'études de machines spéciales", cadre: "AutoMachine", annee: "Mars – juin 2024",
       image: photo("photo-1528323273322-d81458248d40"),
       objectif: "Concevoir un prototype de machine qui découpe des boîtes à recycler.",
-      demarche: "Trois mois pour concevoir le prototype et son convoyeur, puis participer à son montage en atelier.",
-      outils: ["CAO", "Convoyeur", "Montage en atelier"]
+      demarche: "Conception du prototype motorisé et de son convoyeur, avec le dimensionnement de la structure, puis participation à son montage et à ses essais en atelier.",
+      outils: ["CAO", "Dimensionnement", "Convoyeur", "Montage en atelier"]
     }
   ];
 })();

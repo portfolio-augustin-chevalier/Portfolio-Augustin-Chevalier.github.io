@@ -52,12 +52,30 @@ p { margin: 0; max-width: 65ch; }
 .nav { display: flex; gap: 2px 8px; }
 .nav a { font-size: .85rem; text-decoration: none; color: var(--muted); padding: 10px 8px; min-height: 44px; display: inline-flex; align-items: center; }
 .nav a:hover { color: var(--ink); }
+.bar-tools { display: flex; align-items: center; gap: 8px; }
+.lang { display: flex; align-items: center; padding: 2px; border: 1px solid var(--line); border-radius: 999px; }
+.lang a { display: inline-flex; align-items: center; min-height: 28px; padding: 0 9px; border-radius: 999px; font-size: .72rem; font-weight: 600; letter-spacing: .04em; text-decoration: none; color: var(--muted); }
+.lang a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.lang a:not([aria-current]):hover { color: var(--ink); }
+.theme-btn { width: 34px; height: 34px; display: grid; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; }
+.theme-btn:hover { border-color: var(--ink); }
+.theme-btn svg { display: block; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Mode sombre forcé par le bouton ou suivi du système : icône et logos adaptés */
+.theme-btn .i-sun, .tl-logo .logo-sombre { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-btn .i-sun, :root:not([data-theme="light"]) .tl-logo .logo-sombre { display: block; }
+  :root:not([data-theme="light"]) .theme-btn .i-moon, :root:not([data-theme="light"]) .tl-logo .logo-clair { display: none; }
+}
+:root[data-theme="dark"] .theme-btn .i-sun, :root[data-theme="dark"] .tl-logo .logo-sombre { display: block; }
+:root[data-theme="dark"] .theme-btn .i-moon, :root[data-theme="dark"] .tl-logo .logo-clair { display: none; }
 
 /* Boutons et liens */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 24px; font: 500 1rem var(--font); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
 .btn:hover { border-color: var(--ink); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .btn.primary:hover { filter: brightness(1.1); }
+.btn svg { width: 18px; height: 18px; margin-right: 8px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .btn.small { min-height: 38px; padding: 0 16px; font-size: .88rem; background: var(--fig); }
 .link { display: inline-flex; align-items: center; min-height: 46px; color: var(--link); text-decoration: none; font-size: 1.05rem; }
 .link::after { content: "›"; margin-left: .35em; font-size: 1.2em; }
@@ -87,6 +105,8 @@ p { margin: 0; max-width: 65ch; }
 .hero.photo .eyebrow, .hero.photo .sub { color: rgba(245, 245, 247, .85); }
 .hero.photo .label { color: rgba(245, 245, 247, .7); }
 .hero.photo .link { color: #2997FF; }
+.hero.photo .btn:not(.primary) { color: #F5F5F7; border-color: rgba(255, 255, 255, .45); background: rgba(255, 255, 255, .08); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.hero.photo .btn:not(.primary):hover { border-color: #FFFFFF; }
 
 /* Projets phares */
 .pnav { justify-content: center; margin-top: 12px; }
@@ -184,8 +204,12 @@ footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; 
   .contact .row .label { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .brand { display: none; }
-  .nav { width: 100%; justify-content: space-between; }
+  html { scroll-padding-top: 104px; }
+  .pgroup, .pcard { scroll-margin-top: 104px; }
+  .bar .inner { flex-wrap: wrap; row-gap: 0; padding-top: 6px; }
+  .brand { font-size: .95rem; }
+  .bar-tools { margin-left: auto; }
+  .nav { order: 3; width: 100%; justify-content: space-between; }
   .nav a { padding-inline: 4px; font-size: .8rem; }
 }
 @media (prefers-reduced-motion: reduce) {
