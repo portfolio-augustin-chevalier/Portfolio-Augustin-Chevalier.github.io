@@ -131,6 +131,19 @@
     a.addEventListener("click", function () { if (location.hash) a.href = a.getAttribute("href") + location.hash; });
   });
 
+  /* Petit écran : si le menu déborde, on peut le faire défiler et un fondu indique la suite */
+  var nav = document.querySelector(".nav");
+  if (nav) {
+    var majNav = function () {
+      var deborde = nav.scrollWidth > nav.clientWidth + 1;
+      nav.classList.toggle("defile", deborde);
+      nav.classList.toggle("fin", !deborde || nav.scrollLeft + nav.clientWidth >= nav.scrollWidth - 2);
+    };
+    nav.addEventListener("scroll", majNav, { passive: true });
+    window.addEventListener("resize", majNav);
+    majNav();
+  }
+
   outils();
   projetsParCategorie();
   competences();

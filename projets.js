@@ -145,14 +145,6 @@ window.CATEGORIES = [
 
     /* ---------- En entreprise ---------- */
     {
-      id: "alternance", categorie: "entreprise",
-      titre: "Alternance en bureau d'études", cadre: "HAcare", annee: "Depuis 2024",
-      image: photo("photo-1778151270902-cb0ca572f2ee"),
-      objectif: "Concevoir et faire évoluer du mobilier médical, principalement des lits et des brancards, d'abord comme technicien puis comme ingénieur en conception.",
-      demarche: "Conception de pièces et d'ensembles sous SolidWorks avec leurs nomenclatures, standardisation des composants et des méthodes CAO de la gamme, puis montage et essais de prototypes pour valider les concepts.",
-      outils: ["SolidWorks", "Nomenclatures", "Standardisation", "Prototypes"]
-    },
-    {
       id: "stage", categorie: "entreprise",
       titre: "Stage en bureau d'études de machines spéciales", cadre: "AutoMachine", annee: "Mars – juin 2024",
       image: photo("photo-1528323273322-d81458248d40"),

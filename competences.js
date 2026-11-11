@@ -28,7 +28,7 @@ window.COMPETENCES = [
       "Pièces plastiques et composants standards, pensés avec la fabrication"
     ],
     outils: ["SolidWorks", "Fusion 360", "3D Experience"],
-    preuves: ["debudeuse", "compacteur", "support-tel", "alternance"]
+    preuves: ["debudeuse", "compacteur", "support-tel"]
   },
   {
     id: "simulation",

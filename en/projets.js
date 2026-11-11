@@ -129,14 +129,6 @@ window.CATEGORIES = [
 
     /* ---------- In industry ---------- */
     {
-      id: "alternance", categorie: "entreprise",
-      titre: "Work-study in a design office", cadre: "HAcare", annee: "Since 2024",
-      image: photo("photo-1778151270902-cb0ca572f2ee"),
-      objectif: "Design and improve medical furniture, mainly beds and stretchers, first as a technician and now as a design engineer.",
-      demarche: "Designing parts and assemblies in SolidWorks with their bills of materials, standardizing components and CAD methods across the range, then building and testing prototypes to validate concepts.",
-      outils: ["SolidWorks", "Bills of materials", "Standardization", "Prototypes"]
-    },
-    {
       id: "stage", categorie: "entreprise",
       titre: "Internship in a special-machine design office", cadre: "AutoMachine", annee: "March – June 2024",
       image: photo("photo-1528323273322-d81458248d40"),
