@@ -136,7 +136,7 @@ window.CATEGORIES = [
     {
       id: "atelier-3d", categorie: "production",
       titre: "Atelier en 3D et réalité virtuelle", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1764114441097-6a475eca993d"),
+      image: photo("photo-1592477725143-2e57dc728f0a"),
       objectif: "Reproduire un atelier en 3D pour pouvoir le parcourir en réalité virtuelle.",
       demarche: "Relevé de cotes sur place, modélisation d'une cisaille manuelle, implantation de l'atelier, puis visualisation en réalité virtuelle.",
       outils: ["Fusion 360", "FlexSim", "Réalité virtuelle"]

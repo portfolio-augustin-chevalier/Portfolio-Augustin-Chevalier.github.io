@@ -120,7 +120,7 @@ window.CATEGORIES = [
     {
       id: "atelier-3d", categorie: "production",
       titre: "Workshop in 3D and virtual reality", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1764114441097-6a475eca993d"),
+      image: photo("photo-1592477725143-2e57dc728f0a"),
       objectif: "Recreate a workshop in 3D so it can be explored in virtual reality.",
       demarche: "On-site measurements, modeling of a manual shear, workshop layout, then viewing it in virtual reality.",
       outils: ["Fusion 360", "FlexSim", "Virtual reality"]
