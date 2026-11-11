@@ -67,7 +67,7 @@ window.COMPETENCES = [
       "Cadence, goulot d'étranglement et implantation d'une ligne"
     ],
     outils: ["FlexSim", "Imprimantes 3D"],
-    preuves: ["voiture-aero", "lean", "stage", "solar"]
+    preuves: ["voiture-aero", "lean", "solar"]
   },
   {
     id: "innovation",

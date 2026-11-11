@@ -24,8 +24,7 @@
 window.CATEGORIES = [
   { id: "conception", titre: "Conception et innovation produit", accroche: "Partir d'un besoin pour arriver à une solution concrète." },
   { id: "simulation", titre: "Simulation et calcul", accroche: "Vérifier par le calcul avant de fabriquer." },
-  { id: "production", titre: "Production et industrialisation", accroche: "Penser la fabrication et l'organisation de l'atelier." },
-  { id: "entreprise", titre: "En entreprise", accroche: "Travailler sur des produits réels, avec de vraies contraintes." }
+  { id: "production", titre: "Production et industrialisation", accroche: "Penser la fabrication et l'organisation de l'atelier." }
 ];
 
 (function () {
@@ -141,16 +140,6 @@ window.CATEGORIES = [
       objectif: "Reproduire un atelier en 3D pour pouvoir le parcourir en réalité virtuelle.",
       demarche: "Relevé de cotes sur place, modélisation d'une cisaille manuelle, implantation de l'atelier, puis visualisation en réalité virtuelle.",
       outils: ["Fusion 360", "FlexSim", "Réalité virtuelle"]
-    },
-
-    /* ---------- En entreprise ---------- */
-    {
-      id: "stage", categorie: "entreprise",
-      titre: "Stage en bureau d'études de machines spéciales", cadre: "AutoMachine", annee: "Mars – juin 2024",
-      image: photo("photo-1528323273322-d81458248d40"),
-      objectif: "Concevoir un prototype de machine qui découpe des boîtes à recycler.",
-      demarche: "Conception du prototype motorisé et de son convoyeur, avec le dimensionnement de la structure, puis participation à son montage et à ses essais en atelier.",
-      outils: ["CAO", "Dimensionnement", "Convoyeur", "Montage en atelier"]
     }
   ];
 })();

@@ -8,8 +8,7 @@
 window.CATEGORIES = [
   { id: "conception", titre: "Design and product innovation", accroche: "Start from a need and reach a concrete solution." },
   { id: "simulation", titre: "Simulation and analysis", accroche: "Check it by calculation before building it." },
-  { id: "production", titre: "Production and industrialization", accroche: "Think about manufacturing and how the workshop is organized." },
-  { id: "entreprise", titre: "In industry", accroche: "Working on real products, with real constraints." }
+  { id: "production", titre: "Production and industrialization", accroche: "Think about manufacturing and how the workshop is organized." }
 ];
 
 (function () {
@@ -125,16 +124,6 @@ window.CATEGORIES = [
       objectif: "Recreate a workshop in 3D so it can be explored in virtual reality.",
       demarche: "On-site measurements, modeling of a manual shear, workshop layout, then viewing it in virtual reality.",
       outils: ["Fusion 360", "FlexSim", "Virtual reality"]
-    },
-
-    /* ---------- In industry ---------- */
-    {
-      id: "stage", categorie: "entreprise",
-      titre: "Internship in a special-machine design office", cadre: "AutoMachine", annee: "March – June 2024",
-      image: photo("photo-1528323273322-d81458248d40"),
-      objectif: "Design a prototype machine that cuts boxes for recycling.",
-      demarche: "Design of the motorized prototype and its conveyor, including structural sizing, then helping to assemble and test it in the workshop.",
-      outils: ["CAD", "Sizing", "Conveyor", "Workshop assembly"]
     }
   ];
 })();

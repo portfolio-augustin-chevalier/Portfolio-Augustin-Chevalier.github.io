@@ -56,7 +56,7 @@ window.COMPETENCES = [
       "Cycle time, bottlenecks and production line layout"
     ],
     outils: ["FlexSim", "3D printers"],
-    preuves: ["voiture-aero", "lean", "stage", "solar"]
+    preuves: ["voiture-aero", "lean", "solar"]
   },
   {
     id: "innovation",
