@@ -27,7 +27,7 @@ window.COMPETENCES = [
       "Dessins de définition, dessins d'ensemble et mises en plan",
       "Pièces plastiques et composants standards, pensés avec la fabrication"
     ],
-    outils: ["SolidWorks", "Fusion 360", "3D Experience"],
+    outils: ["SolidWorks", "Fusion 360", "3DEXPERIENCE"],
     preuves: ["debudeuse", "compacteur", "support-tel"]
   },
   {

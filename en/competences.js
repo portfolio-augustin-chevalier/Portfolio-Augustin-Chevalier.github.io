@@ -16,7 +16,7 @@ window.COMPETENCES = [
       "Detail drawings, assembly drawings and drafting",
       "Plastic parts and standard components, designed with manufacturing in mind"
     ],
-    outils: ["SolidWorks", "Fusion 360", "3D Experience"],
+    outils: ["SolidWorks", "Fusion 360", "3DEXPERIENCE"],
     preuves: ["debudeuse", "compacteur", "support-tel"]
   },
   {

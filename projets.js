@@ -39,7 +39,7 @@ window.CATEGORIES = [
       image: "images/projet-debudeuse.jpg",
       objectif: "Concevoir une machine low-tech qui sépare les fleurs de chanvre de leurs tiges, pensée pour les petits producteurs.",
       demarche: "Analyse fonctionnelle, recherche de concepts et choix par la méthode TOPSIS, puis dimensionnement de la motorisation et maquette CAO avec des composants standards, en intégrant l'éco-conception (matériaux, réparabilité, fin de vie).",
-      outils: ["3D Experience", "Analyse fonctionnelle", "TOPSIS", "Éco-conception"]
+      outils: ["3DEXPERIENCE", "Analyse fonctionnelle", "TOPSIS", "Éco-conception"]
     },
     {
       id: "compacteur", categorie: "conception",

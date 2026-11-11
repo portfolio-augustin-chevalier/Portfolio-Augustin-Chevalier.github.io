@@ -23,13 +23,13 @@ window.CATEGORIES = [
       image: "../images/projet-debudeuse.jpg",
       objectif: "Design a low-tech machine that separates hemp flowers from their stems, for small-scale growers.",
       demarche: "Functional analysis, concept search and selection with the TOPSIS method, then motor sizing and a CAD model built from standard components, with eco-design in mind (materials, repairability, end of life).",
-      outils: ["3D Experience", "Functional analysis", "TOPSIS", "Eco-design"]
+      outils: ["3DEXPERIENCE", "Functional analysis", "TOPSIS", "Eco-design"]
     },
     {
       id: "compacteur", categorie: "conception",
       titre: "Manual can crusher", cadre: "INSA Lyon", annee: "2025 – 2026",
       image: "../images/projet-compacteur.jpg",
-      objectif: "Imagine a household crusher that reduces the volume of cans to make storage and recycling easier.",
+      objectif: "Come up with a household crusher that reduces the volume of cans to make storage and recycling easier.",
       demarche: "Needs analysis and function ranking, concept search, life cycle study, solution selection with TOPSIS, then design from a CAD skeleton.",
       outils: ["Needs analysis", "Life cycle", "TOPSIS", "Skeleton CAD"]
     },
@@ -37,7 +37,7 @@ window.CATEGORIES = [
       id: "bracelet", categorie: "conception",
       titre: "Haptic wristband for hiking", cadre: "INSA Lyon", annee: "2025 – 2026",
       image: photo("photo-1748280613430-27e9ecb9aaf6"),
-      objectif: "Imagine a wristband that guides hikers with vibrations, without them having to take out their phone.",
+      objectif: "Come up with a wristband that guides hikers with vibrations, without them having to take out their phone.",
       demarche: "User interviews, concept testing and business model, then a poster to present the project.",
       outils: ["User interviews", "Concept testing", "Business model"]
     },
