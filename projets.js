@@ -110,7 +110,7 @@ window.CATEGORIES = [
     {
       id: "bielle", categorie: "simulation",
       titre: "Bielle de sécurité", cadre: "BUT GMP", annee: "2022 – 2023",
-      image: photo("photo-1753028196199-be701ae822d3"),
+      image: photo("photo-1639616274004-989b1d018bed"),
       objectif: "Concevoir une bielle allégée qui travaille comme un ressort.",
       demarche: "Dimensionnement et vérification en simulation, puis essais de traction sur éprouvettes pour valider le matériau.",
       outils: ["Simulation", "Essai de traction", "Matériaux"]

@@ -94,7 +94,7 @@ window.CATEGORIES = [
     {
       id: "bielle", categorie: "simulation",
       titre: "Safety connecting rod", cadre: "BUT GMP", annee: "2022 – 2023",
-      image: photo("photo-1753028196199-be701ae822d3"),
+      image: photo("photo-1639616274004-989b1d018bed"),
       objectif: "Design a lightweight connecting rod that works like a spring.",
       demarche: "Sizing and checking in simulation, then tensile tests on specimens to validate the material.",
       outils: ["Simulation", "Tensile testing", "Materials"]
