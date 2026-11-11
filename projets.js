@@ -36,7 +36,7 @@ window.CATEGORIES = [
     {
       id: "debudeuse", categorie: "conception",
       titre: "Débudeuse de chanvre", cadre: "INSA Lyon", annee: "2025 – 2026",
-      image: photo("photo-1631112086050-4ca0b7ac73f3"),
+      image: "images/projet-debudeuse.jpg",
       objectif: "Concevoir une machine low-tech qui sépare les fleurs de chanvre de leurs tiges, pensée pour les petits producteurs.",
       demarche: "Analyse fonctionnelle, recherche de concepts et choix par la méthode TOPSIS, puis dimensionnement de la motorisation et maquette CAO avec des composants standards, en intégrant l'éco-conception (matériaux, réparabilité, fin de vie).",
       outils: ["3D Experience", "Analyse fonctionnelle", "TOPSIS", "Éco-conception"]
@@ -44,7 +44,7 @@ window.CATEGORIES = [
     {
       id: "compacteur", categorie: "conception",
       titre: "Compacteur manuel de canettes", cadre: "INSA Lyon", annee: "2025 – 2026",
-      image: photo("photo-1605780084182-467a42b6772f"),
+      image: "images/projet-compacteur.jpg",
       objectif: "Imaginer un compacteur domestique qui réduit le volume des canettes pour faciliter leur stockage et leur recyclage.",
       demarche: "Analyse du besoin et hiérarchisation des fonctions, recherche de concepts, étude du cycle de vie, choix de la solution par TOPSIS, puis conception à partir d'un squelette CAO.",
       outils: ["Analyse du besoin", "Cycle de vie", "TOPSIS", "CAO squelette"]
@@ -68,7 +68,7 @@ window.CATEGORIES = [
     {
       id: "solar", categorie: "conception",
       titre: "Solar Challenge", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1578332183688-33ca3dbf70f4"),
+      image: "images/projet-solar.jpg",
       objectif: "Participer à la conception d'une petite voiture solaire pour une course entre écoles.",
       demarche: "Conception de la direction, de la propulsion et du support de boîtier, avec des pièces imprimées en 3D.",
       outils: ["CAO", "Impression 3D"]
@@ -78,7 +78,7 @@ window.CATEGORIES = [
     {
       id: "compresseur", categorie: "simulation",
       titre: "Optimisation de la cuve d'un compresseur", cadre: "BUT GMP", annee: "2024 – 2025",
-      image: photo("photo-1737874132953-b39a4812875d"),
+      image: "images/projet-cuve-compresseur.jpg",
       objectif: "Alléger la cuve d'un compresseur d'air sans dégrader sa sécurité.",
       demarche: "Pré-étude sur tableur, simulation de la cuve sous pression, puis étude de conception pour trouver le meilleur couple rayon et épaisseur, dans le respect de la norme et des encombrements imposés.",
       outils: ["SolidWorks Simulation", "Étude de conception", "Tableur"]
@@ -86,7 +86,7 @@ window.CATEGORIES = [
     {
       id: "voiture-aero", categorie: "simulation",
       titre: "Voiture aérodynamique", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1678402001029-5b8cc141944a"),
+      image: "images/projet-voiture-aero.jpg",
       objectif: "Réduire la traînée d'une maquette de voiture, lors d'une compétition entre étudiants de la promotion.",
       demarche: "Deux modèles conçus puis comparés en simulation d'écoulement, améliorations du modèle retenu (diffuseur, rampe avant, aileron), impression 3D et essai en soufflerie pour confronter le calcul à la réalité.",
       outils: ["SolidWorks", "Flow Simulation", "Impression 3D", "Soufflerie"]

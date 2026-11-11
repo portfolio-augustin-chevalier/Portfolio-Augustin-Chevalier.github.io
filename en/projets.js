@@ -20,7 +20,7 @@ window.CATEGORIES = [
     {
       id: "debudeuse", categorie: "conception",
       titre: "Hemp bud-stripping machine", cadre: "INSA Lyon", annee: "2025 – 2026",
-      image: photo("photo-1631112086050-4ca0b7ac73f3"),
+      image: "../images/projet-debudeuse.jpg",
       objectif: "Design a low-tech machine that separates hemp flowers from their stems, for small-scale growers.",
       demarche: "Functional analysis, concept search and selection with the TOPSIS method, then motor sizing and a CAD model built from standard components, with eco-design in mind (materials, repairability, end of life).",
       outils: ["3D Experience", "Functional analysis", "TOPSIS", "Eco-design"]
@@ -28,7 +28,7 @@ window.CATEGORIES = [
     {
       id: "compacteur", categorie: "conception",
       titre: "Manual can crusher", cadre: "INSA Lyon", annee: "2025 – 2026",
-      image: photo("photo-1605780084182-467a42b6772f"),
+      image: "../images/projet-compacteur.jpg",
       objectif: "Imagine a household crusher that reduces the volume of cans to make storage and recycling easier.",
       demarche: "Needs analysis and function ranking, concept search, life cycle study, solution selection with TOPSIS, then design from a CAD skeleton.",
       outils: ["Needs analysis", "Life cycle", "TOPSIS", "Skeleton CAD"]
@@ -52,7 +52,7 @@ window.CATEGORIES = [
     {
       id: "solar", categorie: "conception",
       titre: "Solar Challenge", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1578332183688-33ca3dbf70f4"),
+      image: "../images/projet-solar.jpg",
       objectif: "Take part in designing a small solar car for an inter-school race.",
       demarche: "Design of the steering, the drivetrain and the electronics box mount, with 3D-printed parts.",
       outils: ["CAD", "3D printing"]
@@ -62,7 +62,7 @@ window.CATEGORIES = [
     {
       id: "compresseur", categorie: "simulation",
       titre: "Compressor tank optimization", cadre: "BUT GMP", annee: "2024 – 2025",
-      image: photo("photo-1737874132953-b39a4812875d"),
+      image: "../images/projet-cuve-compresseur.jpg",
       objectif: "Make an air compressor tank lighter without reducing its safety.",
       demarche: "Spreadsheet pre-study, simulation of the tank under pressure, then a design study to find the best radius and wall thickness, within the standard and the imposed dimensions.",
       outils: ["SolidWorks Simulation", "Design study", "Spreadsheet"]
@@ -70,7 +70,7 @@ window.CATEGORIES = [
     {
       id: "voiture-aero", categorie: "simulation",
       titre: "Aerodynamic car", cadre: "BUT GMP", annee: "2023 – 2024",
-      image: photo("photo-1678402001029-5b8cc141944a"),
+      image: "../images/projet-voiture-aero.jpg",
       objectif: "Reduce the drag of a model car, in a competition between students of my year.",
       demarche: "Two models designed and compared with flow simulation, improvements to the chosen one (diffuser, front ramp, wing), then 3D printing and a wind tunnel test to compare the calculations with reality.",
       outils: ["SolidWorks", "Flow Simulation", "3D printing", "Wind tunnel"]
